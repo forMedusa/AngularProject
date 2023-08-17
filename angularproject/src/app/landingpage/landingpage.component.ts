@@ -44,10 +44,26 @@ export class LandingpageComponent implements OnInit {
 selectItem(itemId: number) {
   this.selectedItemId = itemId;
    this.service.setSelectedItemId(this.users[itemId-1])
-   localStorage.setItem('user1Name', this.users[itemId].name);
-   localStorage.setItem('user1Image', this.users[itemId].profilepicture);
-   localStorage.setItem('user2Name', this.users[itemId+1].name);
-   localStorage.setItem('user2Image', this.users[itemId+1].profilepicture);
+   console.log(itemId) // 8
+   if(itemId == 9){
+    localStorage.setItem('user1Name', this.users[itemId].name);
+    localStorage.setItem('user1Image', this.users[itemId].profilepicture);
+    localStorage.setItem('user2Name', this.users[itemId-3].name);
+    localStorage.setItem('user2Image', this.users[itemId-3].profilepicture);
+   }
+   else if(itemId == 10){
+    localStorage.setItem('user1Name', this.users[itemId-2].name);
+    localStorage.setItem('user1Image', this.users[itemId-2].profilepicture);
+    localStorage.setItem('user2Name', this.users[itemId-3].name);
+    localStorage.setItem('user2Image', this.users[itemId-3].profilepicture);
+   }
+   else{
+    localStorage.setItem('user1Name', this.users[itemId].name);
+    localStorage.setItem('user1Image', this.users[itemId].profilepicture);
+    localStorage.setItem('user2Name', this.users[itemId+1].name);
+    localStorage.setItem('user2Image', this.users[itemId+1].profilepicture);
+   }
+   
    this.route.navigateByUrl('/profile');
 }
  

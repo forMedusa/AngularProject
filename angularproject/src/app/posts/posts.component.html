@@ -1,7 +1,43 @@
 <div class="profilePage">
     <app-sidebar></app-sidebar>
     <div class="userdeatils">
-    <app-topbar></app-topbar>
+        <div class="userdeatils">
+            <div class="topbar">
+                <div class="left">
+                    <h5 style="color: #545454;">Posts</h5>
+                </div>
+                <div class="right" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img [src]="userData.profilepicture" alt="User Profile">
+                  <span>{{userData.name}}</span>
+                </div>
+              </div>
+              <hr class="hrline">
+              <!-- Button trigger modal -->
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <img [src]="userData.profilepicture" width="100" alt="User Profile" style="border-radius: 50%; margin: auto;">
+                        <span>{{userData.name}}</span>
+                        <span>{{userData.username}}</span>
+                        <hr>
+                        <div style="display: flex;">
+                        <img class="extraUserImage" [src]="user1Image" alt="User Profile">
+                        <span class="extraUser">{{user1Name}}</span>
+                    </div>
+                        <hr>
+                        <div style="display: flex;">
+                        <img class="extraUserImage"[src]="user2Image" alt="User Profile">
+                        <span class="extraUser">{{user2Name}}</span>
+                    </div>
+                        <button type="button" (click)="clear()" class="btn btn-danger" data-bs-dismiss="modal" style="border-radius: 30px; margin-top: 15%;">Sign Out</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
     <div class="container" style="    margin: auto;
     text-align: center;
     display: flex;
