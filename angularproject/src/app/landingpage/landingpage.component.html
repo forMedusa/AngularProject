@@ -1,0 +1,13 @@
+<div>
+<div class="card">
+    <div class="card-header">
+      Select an Account
+    </div>
+    <ul class="list-group list-group-flush" >
+      <li class="list-group-item"*ngFor = "let usersss of users" (click)="selectItem(usersss.id)">
+        <img class="listImage" [src]="usersss.profilepicture"/>{{usersss.name}}</li>
+    </ul>
+    <div class="card-footer">
+      </div>
+  </div>
+</div>

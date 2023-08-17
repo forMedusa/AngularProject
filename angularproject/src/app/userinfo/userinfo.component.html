@@ -1,0 +1,68 @@
+<div class="container" style="margin-left: 5%; display: flex;">
+    <div class="userData1">
+        <img class="userImage" [src]="userData.profilepicture"/>
+        <p>{{userData.name}}</p>
+        <div class="user-info">
+            <div class="info-row">
+              <div class="info-label">Username:</div>
+              <div class="info-value">{{userData.username}}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Email:</div>
+              <div class="info-value">{{userData.email}}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Phone:</div>
+              <div class="info-value">{{userData.phone}}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Website:</div>
+              <div class="info-value">{{userData.website}}</div>
+            </div>
+            <hr>
+          </div>
+          
+          <div class="user-info">
+            <h5>Company</h5>
+            <div class="info-row">
+              <div class="info-label">Name:</div>
+              <div class="info-value">{{userData.company.name}}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Catchphrase:</div>
+              <div class="info-value">{{userData.company.catchPhrase}}</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">bs:</div>
+              <div class="info-value">{{userData.company.bs}}</div>
+            </div>
+            </div>
+        
+    </div>
+    <div class="vl"></div>
+    <div class="userData2">
+        
+        <div class="user-info">
+            <h5>Address:</h5>
+            <div class="info-row">
+              <div class="info-label">Street:</div>
+              <div class="info-value">{{userData.address.street}}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Suite:</div>
+                <div class="info-value">{{userData.company.name}}</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">City:</div>
+                <div class="info-value">{{userData.company.name}}</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">Zipcode:</div>
+                <div class="info-value">{{userData.company.name}}</div>
+              </div>
+        </div>
+        <p style="margin-top: 5%;">DIDN'T INTEGRATED THE MAP BEC <br/> didn't felt like giving my account details.</p>
+        <p>lan: {{userData.address.geo.lat}}</p>
+        <p>lng: {{userData.address.geo.lng}}</p>
+    </div>
+</div>

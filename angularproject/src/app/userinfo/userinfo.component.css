@@ -1,0 +1,40 @@
+.userData1{
+    justify-content: center;
+    text-align: center;
+}
+.userImage{
+    width: 200px;
+    border-radius: 50%;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  
+  .info-label {
+    color: silver;
+    width: 100px;
+    text-align: right;
+  }
+  
+  .info-value {
+    margin-left: 10px;
+    color: gray;
+    font-weight: 500;
+  }
+.userData2{
+    margin-left: 5%;
+}  
+.vl {
+    border-left: 2px solid gray;
+    height: 500px;
+    margin-left: 5%;
+  }
+
+  
